@@ -1,0 +1,20 @@
+.cart-item {
+  padding: 10px;
+
+  &__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__remove {
+    margin-left: 10px;
+  }
+}
+
+.total-price {
+  padding: 10px;
+  text-align: right;
+  font-weight: bold;
+}
