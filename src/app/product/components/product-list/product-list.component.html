@@ -1,6 +1,7 @@
-<div class="product-grid-container">
-  <mat-grid-list cols="3" [rowHeight]="'400px'" gutterSize="20px" class="product-grid">
-    <mat-grid-tile *ngFor="let product of products">
+<div *ngIf="filtered.length > 0; else noProducts" class="product-grid-container">
+  <mat-grid-list cols="3" rowHeight="1:1" gutterSize="20px" class="product-grid">
+
+    <mat-grid-tile *ngFor="let product of filtered">
       <a mat-card class="product-card" [routerLink]="['/products', product.id]">
         <div class="product-card__image-container">
           <img mat-card-image [src]="product.imageUrl" alt="{{product.name}}" class="product-card__image" />
@@ -11,5 +12,10 @@
         </mat-card-content>
       </a>
     </mat-grid-tile>
+
   </mat-grid-list>
 </div>
+
+<ng-template #noProducts>
+  <p>No products found</p>
+</ng-template>

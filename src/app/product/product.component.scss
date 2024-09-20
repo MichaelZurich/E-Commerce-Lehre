@@ -1,0 +1,43 @@
+.product {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+  }
+
+  &__title {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+
+  &__search,
+  &__filter {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+  }
+
+  &__filter {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+
+    &-min,
+    &-max {
+      flex: 1;
+      margin: 0 10px;
+    }
+  }
+
+  &__button {
+    margin-top: 20px;
+    display: inline-block;
+  }
+
+  &-form-field {
+    width: 100%;
+  }
+}
