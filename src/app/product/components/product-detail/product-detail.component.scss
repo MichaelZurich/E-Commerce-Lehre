@@ -48,13 +48,12 @@
   }
 
   &__image-container {
-    flex: 0 0 400px;
     text-align: center;
   }
 
   &__image {
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 600px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
