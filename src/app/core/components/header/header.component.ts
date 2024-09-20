@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {CartService} from "../../../cart/services/cart.service";
+import {MatMenuTrigger, MenuCloseReason} from "@angular/material/menu";
 
 @Component({
   selector: 'app-header',
@@ -7,6 +8,7 @@ import {CartService} from "../../../cart/services/cart.service";
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  @ViewChild(MatMenuTrigger) menuTrigger: MatMenuTrigger | undefined;
   totalCartQuantity: number = 0;
 
   constructor(private cartService: CartService) {}

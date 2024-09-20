@@ -2,8 +2,8 @@
   <div mat-menu-item *ngFor="let item of cartItems" class="cart-item">
     <div class="cart-item__details">
       <span>{{ item.product.name }} - {{ item.product.price | currency }} (x{{ item.quantity }})</span>
-      <button mat-icon-button (click)="removeFromCart(item)" class="cart-item__remove">
-        <mat-icon>remove</mat-icon>
+      <button mat-icon-button (click)="removeFromCart(item, $event)" class="cart-item__remove">
+        <mat-icon>delete</mat-icon>
       </button>
     </div>
   </div>

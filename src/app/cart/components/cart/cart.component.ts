@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Cart} from "../../model/cart.model";
 import {CartService} from "../../services/cart.service";
 
@@ -22,13 +22,14 @@ export class CartComponent implements OnInit {
     this.cartItems = this.cartService.getCartItems();
   }
 
-  calculateTotalPrice(): void {
+  calculateTotalPrice() {
     this.cartService.cartTotalPrice.subscribe(price => {
       this.totalPrice = price;
     });
   }
 
-  removeFromCart(item: Cart): void {
+  removeFromCart(item: Cart, event: Event): void {
+    event.stopPropagation()
     this.cartService.removeFromCart(item.product);
     this.loadCartItems();
   }

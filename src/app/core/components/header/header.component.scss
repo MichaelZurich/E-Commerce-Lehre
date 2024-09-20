@@ -2,21 +2,31 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #2167ae !important;
 
   &__title {
     cursor: pointer;
   }
 
   &__title a {
-    color: grey;
+    color: white;
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;
   }
 
+  &__icon {
+    color: white;
+  }
+
   &__spacer {
     flex: 1;
   }
+
+}
+
+::ng-deep .header__menu {
+  background-color: white !important;
 }
 
 .cart-count {
