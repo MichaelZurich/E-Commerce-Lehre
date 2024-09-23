@@ -1,24 +1,22 @@
 <div class="product__container">
-  <h2 class="product__title">Search and Filter Products</h2>
-
   <mat-form-field appearance="fill" class="product__search product-form-field">
-    <mat-label>Search by Name</mat-label>
+    <mat-label>{{ '__filter.by-name' | translate }}</mat-label>
     <input matInput [(ngModel)]="searchQuery">
   </mat-form-field>
 
   <div class="product__filter">
     <mat-form-field class="product__filter-min">
-      <mat-label>Min Price</mat-label>
+      <mat-label>{{ '__filter.min-price' | translate }}</mat-label>
       <input matInput type="number" [(ngModel)]="minPrice">
     </mat-form-field>
 
     <mat-form-field class="product__filter-max">
-      <mat-label>Max Price</mat-label>
+      <mat-label>{{ '__filter.max-price' | translate }}</mat-label>
       <input matInput type="number" [(ngModel)]="maxPrice">
     </mat-form-field>
   </div>
 
-  <button mat-raised-button color="primary" class="product__button" (click)="resetFilters()">Reset Filters</button>
+  <button mat-raised-button color="primary" class="product__button" (click)="resetFilters()">{{ '__filter.reset' | translate }}</button>
 </div>
 
   <app-product-list

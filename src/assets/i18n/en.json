@@ -1,0 +1,13 @@
+{
+  "__product.no-products" : "No products found",
+  "__cart.add-to-cart": "Add to Cart",
+  "__cart.empty": "No items in Cart",
+  "__filter.by-price": "Filter by Price",
+  "__filter.by-name": "Search by Name",
+  "__filter.min-price": "Min Price",
+  "__filter.max-price": "Max Price",
+  "__filter.reset": "Reset Filters",
+  "__filter.no-result": "No products found"
+}
+
+

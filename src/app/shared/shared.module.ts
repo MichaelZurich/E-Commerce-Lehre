@@ -5,6 +5,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatMenu, MatMenuItem, MatMenuTrigger} from "@angular/material/menu";
 import {MatToolbar} from "@angular/material/toolbar";
 import {RouterLink} from "@angular/router";
+import {TranslateModule} from "@ngx-translate/core";
 
 
 
@@ -28,7 +29,8 @@ import {RouterLink} from "@angular/router";
     MatToolbar,
     RouterLink,
     MatMenuTrigger,
-    MatMenu
+    MatMenu,
+    TranslateModule
   ]
 })
 export class SharedModule { }

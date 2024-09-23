@@ -11,6 +11,7 @@ import {MatFormField, MatLabel} from "@angular/material/form-field";
 import {MatInput} from "@angular/material/input";
 import {FormsModule} from "@angular/forms";
 import {MatSlider} from "@angular/material/slider";
+import {SharedModule} from "../shared/shared.module";
 
 
 
@@ -20,18 +21,19 @@ import {MatSlider} from "@angular/material/slider";
     ProductDetailComponent,
     ProductComponent
   ],
-  imports: [
-    CommonModule,
-    ProductRoutingModule,
-    MatCardModule,
-    MatGridListModule,
-    MatButtonModule,
-    MatFormField,
-    MatInput,
-    FormsModule,
-    MatSlider,
-    MatLabel
-  ],
+    imports: [
+        CommonModule,
+        ProductRoutingModule,
+        MatCardModule,
+        MatGridListModule,
+        MatButtonModule,
+        MatFormField,
+        MatInput,
+        FormsModule,
+        MatSlider,
+        MatLabel,
+        SharedModule
+    ],
   exports: [
     ProductListComponent
   ]

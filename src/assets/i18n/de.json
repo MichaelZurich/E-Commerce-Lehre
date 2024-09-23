@@ -1,0 +1,13 @@
+{
+  "__product.no-products" : "Keine Produkte gefunden",
+  "__cart.add-to-cart": "Zum Warenkorb hinzufügen",
+  "__cart.empty": "Keine Produkte im Warenkorb",
+  "__filter.by-price": "Nach Preis sortieren",
+  "__filter.by-name": "Nach Namen suchen",
+  "__filter.min-price": "Mindestpreis",
+  "__filter.max-price": "Höchstpreis",
+  "__filter.reset": "Filter zurücksetzen",
+  "__filter.no-result": "Keine Produkte gefunden"
+}
+
+
