@@ -40,4 +40,36 @@
   &-form-field {
     width: 100%;
   }
+
+  @media (max-width: 768px) {
+    &__container {
+      padding: 10px;
+    }
+
+    &__search,
+    &__filter {
+      max-width: 100%;
+    }
+
+    &__filter {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    &__filter-min,
+    &__filter-max {
+      margin: 0;
+      width: 100%;  // Make the filters full width on mobile
+    }
+
+    &__button {
+      width: 100%;  // Make the button full width on mobile
+    }
+
+    &__title {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+  }
 }

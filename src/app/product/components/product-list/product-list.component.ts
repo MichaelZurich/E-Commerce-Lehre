@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnChanges, OnInit, Output} from '@angular/core';
 import {Product} from "../../model/product.model";
+import {BreakpointObserver, Breakpoints} from "@angular/cdk/layout";
 
 @Component({
   selector: 'app-product-list',
@@ -11,13 +12,18 @@ export class ProductListComponent implements OnChanges{
   @Input() searchQuery: string = '';
   @Input() minPrice: number | null = null;
   @Input() maxPrice: number | null = null;
+  gridCols: number = 3;
 
   @Output() filteredProducts = new EventEmitter<Product[]>();
 
   filtered: Product[] = [];
 
+  constructor(private breakpointObserver: BreakpointObserver) {}
+
+
   ngOnChanges(): void {
     this.filterProducts();
+    this.setGridColumns();
   }
 
   filterProducts(): void {
@@ -29,5 +35,23 @@ export class ProductListComponent implements OnChanges{
     });
 
     this.filteredProducts.emit(this.filtered);
+  }
+
+  setGridColumns(): void {
+    this.breakpointObserver.observe([
+      Breakpoints.HandsetPortrait,
+      Breakpoints.TabletPortrait,
+      Breakpoints.Web
+    ]).subscribe(result => {
+      if (result.matches) {
+        if (result.breakpoints[Breakpoints.HandsetPortrait]) {
+          this.gridCols = 1;
+        } else if (result.breakpoints[Breakpoints.TabletPortrait]) {
+          this.gridCols = 2;
+        } else {
+          this.gridCols = 3;
+        }
+      }
+    });
   }
 }

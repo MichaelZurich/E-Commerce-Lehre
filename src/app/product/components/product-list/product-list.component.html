@@ -1,5 +1,5 @@
 <div *ngIf="filtered.length > 0; else noProducts" class="product-grid-container">
-  <mat-grid-list cols="3" rowHeight="1:1" gutterSize="20px" class="product-grid">
+  <mat-grid-list [cols]="gridCols" rowHeight="1:1" gutterSize="20px" class="product-grid">
 
     <mat-grid-tile *ngFor="let product of filtered">
       <a mat-card class="product-card" [routerLink]="['/products', product.id]">
@@ -8,7 +8,7 @@
         </div>
         <mat-card-content>
           <h2 class="product-card__title">{{ product.name }}</h2>
-          <p class="product-card__price">{{ product.price }}</p>
+          <p class="product-card__price">{{ product.price | currency }}</p>
         </mat-card-content>
       </a>
     </mat-grid-tile>

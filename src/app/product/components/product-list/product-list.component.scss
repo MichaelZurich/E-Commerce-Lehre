@@ -6,6 +6,27 @@
     margin: 0 auto;
     padding: 20px 0;
   }
+
+  // Default (desktop) design: 3 columns
+  .mat-grid-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // 3 cards per row on large screens
+    grid-gap: 20px;
+  }
+
+  // For medium screens (tablets, between 768px and 1280px)
+  @media (max-width: 1280px) and (min-width: 768px) {
+    .mat-grid-list {
+      grid-template-columns: repeat(2, 1fr); // 2 cards per row on medium screens
+    }
+  }
+
+  // For small screens (mobile, below 768px)
+  @media (max-width: 768px) {
+    .mat-grid-list {
+      grid-template-columns: repeat(1, 1fr); // 1 card per row on mobile
+    }
+  }
 }
 
 .product-card {
@@ -27,7 +48,7 @@
     justify-content: center;
     align-items: center;
     height: 150px;
-    margin-top: 20px
+    margin-top: 20px;
   }
 
   &__image {
@@ -51,12 +72,4 @@
     display: flex;
     justify-content: center;
   }
-
-}
-
-.mat-grid-tile {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
 }
